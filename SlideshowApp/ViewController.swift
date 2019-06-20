@@ -87,6 +87,9 @@ class ViewController: UIViewController {
             self.timer.invalidate()   // 自動送りを停止する
             self.timer = nil
             startStop.setTitle("再生", for: .normal)
+            
+            backButton.isEnabled = true // ボタン有効
+            nextButton.isEnabled = true // ボタン有効
         }
     }
     

@@ -28,7 +28,7 @@
                                             <constraint firstAttribute="width" constant="60" id="ho2-PJ-stj"/>
                                             <constraint firstAttribute="height" constant="40" id="nb4-gW-mm2"/>
                                         </constraints>
-                                        <state key="normal" title=" NEXT">
+                                        <state key="normal" title="進む">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -58,7 +58,7 @@
                                         </constraints>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <state key="normal" title="Back">
+                                        <state key="normal" title="戻る">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         </state>
                                         <connections>
@@ -98,7 +98,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="93h-li-FjY">
                     <connections>
-                        <action selector="tapAction:" destination="BYZ-38-t0r" id="d5B-qN-glf"/>
                         <segue destination="f7z-Dz-atP" kind="show" id="RON-rc-Kzu"/>
                     </connections>
                 </tapGestureRecognizer>
@@ -124,6 +123,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
+                                    <action selector="onUnWind:" destination="f7z-Dz-atP" eventType="touchUpInside" id="CLX-WR-QKd"/>
                                     <action selector="unWind:" destination="6MB-CX-lWh" eventType="touchUpInside" id="IC3-8r-iKn"/>
                                     <segue destination="6MB-CX-lWh" kind="unwind" unwindAction="unwind:" id="r3x-eY-zgV"/>
                                 </connections>
@@ -150,7 +150,7 @@
                         <viewLayoutGuide key="safeArea" id="g7r-na-DJ4"/>
                     </view>
                     <connections>
-                        <outlet property="ExImage" destination="kiA-zb-Bub" id="kER-rN-yri"/>
+                        <outlet property="exImage" destination="kiA-zb-Bub" id="6Sg-MR-Xek"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Har-7p-q5h" userLabel="First Responder" sceneMemberID="firstResponder"/>

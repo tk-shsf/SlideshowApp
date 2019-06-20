@@ -48,7 +48,7 @@ class ViewController: UIViewController {
         if self.timer == nil {
            self.timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(onTimer(_:)), userInfo: nil, repeats: true)
             
-           sender.setTitle("一時停止", for: .normal)
+           sender.setTitle("停止", for: .normal)
             
             backButton.isEnabled = false // ボタン無効
             nextButton.isEnabled = false // ボタン無効
@@ -76,14 +76,18 @@ class ViewController: UIViewController {
         displayImage()
     }
     
-    
-    @IBAction func onTapAction(_ sender: Any) {
-    }
+
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
        //segueから遷移先のExViewControllerを取得する
         let  exViewController:ExViewController = segue.destination as! ExViewController
         exViewController.image1 = imageView.image
+        
+        if self.timer != nil{
+            self.timer.invalidate()   // 自動送りを停止する
+            self.timer = nil
+            startStop.setTitle("再生", for: .normal)
+        }
     }
     
     

@@ -12,6 +12,11 @@ class ExViewController: UIViewController {
    
     @IBOutlet weak var exImage: UIImageView!
     
+    @IBAction func onUnWind(_ sender: Any) {
+        
+    }
+    
+    
     var image1:UIImage!
     
     
